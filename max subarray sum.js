@@ -24,7 +24,7 @@ var maxSubArray = function (nums) {
 let nums = [2, -8, 8, -11, 1, 9];
 console.log(maxSubArray(nums));
 console.log(nums);
-
+//--------------------------------------------------//
 function arr(array) {
    for (let i = 1; i < array.length; i++) {
       array[i] = array[i] + array[i - 1];
