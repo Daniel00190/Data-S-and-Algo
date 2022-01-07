@@ -16,21 +16,6 @@ class LinkedList {
       this.length++;
    }
    //-----------------------------------------------------------//
-   getByIndex(index) {
-      if (index < 0 || index >= this.length) return null;
-
-      let current = this.head;
-      for (let i = 0; i < index; i++) {
-         current = current.next;
-      }
-      return current;
-   }
-   //-----------------------------------------------------------//
-   removeHead() {
-      this.head = this.head.next;
-      this.length--;
-   }
-   //-----------------------------------------------------------//
    insertAtIndex(index, value) {
       if (index === 0) return this.insertAtHead(value);
 
@@ -50,6 +35,22 @@ class LinkedList {
       prev.next = prev.next.next;
       this.length--;
    }
+   //-----------------------------------------------------------//
+   getByIndex(index) {
+      if (index < 0 || index >= this.length) return null;
+
+      let current = this.head;
+      for (let i = 0; i < index; i++) {
+         current = current.next;
+      }
+      return current;
+   }
+   //-----------------------------------------------------------//
+   removeHead() {
+      this.head = this.head.next;
+      this.length--;
+   }
+
    //-----------------------------------------------------------//
    print() {
       let output = "";
