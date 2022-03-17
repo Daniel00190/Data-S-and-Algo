@@ -21,3 +21,16 @@ var reverseListRecursive = function (head) {
    head.next = null;
    return newHead;
 };
+
+// ALVIN FROM STRUCTY
+const reverseList = function (head) {
+   let prev = null;
+   let curr = head;
+
+   while (head != null) {
+      let temp = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = temp;
+   }
+};
